@@ -12,6 +12,7 @@ Los cambios relevantes de este proyecto se documentarán en este archivo. El for
 - Research comparativo y diseño conceptual previo al contrato operativo de `product-analytics`.
 - Evals human-readable de `product-analytics` para casos positivos, negativos y routing ambiguo con `dashboard-ux`.
 - Referencias operativas de `product-analytics` para jerarquías, definiciones, lifecycle e interpretación diagnóstica.
+- Suite de `product-analytics` ampliada a ocho escenarios y reporte de evaluación conductual manual.
 
 ### Changed
 
