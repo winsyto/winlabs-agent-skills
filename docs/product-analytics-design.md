@@ -2,7 +2,9 @@
 
 Estado del documento: especificación previa a `SKILL.md`
 
-Estado de la skill: Esqueleto
+Estado de la skill al redactar esta especificación: Esqueleto
+
+Estado de implementación actual: Experimental
 Milestone: v0.1 — Analytics & Dashboard Foundation
 
 Base conceptual: [research de `product-analytics`](../research/product-analytics-research.md).
@@ -287,11 +289,11 @@ No se justifican scripts ni assets para esta skill conceptual. Los evals permane
 
 El contrato debe usar Markdown, frontmatter mínimo con `name` y `description`, enlaces relativos y lenguaje agnóstico. No debe depender de tools, metadata ni mecanismos propietarios.
 
-## Open decisions before implementation
+## Decisiones de implementación
 
-1. Definir si owner y cadence son recomendados o condicionalmente requeridos.
-2. Validar con evals si la tabla de definición mejora claridad sin rigidizar respuestas breves.
-3. Acordar cómo expresar confianza o madurez de las relaciones outcome–driver.
-4. Definir el proceso recomendado para establecer targets cuando solo existe una baseline.
-5. Confirmar el handoff con el futuro contrato de `dashboard-ux`.
-6. Probar activación y comportamiento en Codex y Claude Code antes de cambiar el estado a `Experimental`.
+1. Tratar owner y cadence como condicionalmente requeridos para revisiones recurrentes o handoffs operativos, no para toda exploración conceptual.
+2. Mantener la tabla de definición como formato opcional; el contrato semántico es obligatorio para métricas principales, no su representación.
+3. Distinguir relaciones hipotéticas, observadas o respaldadas por evidencia más fuerte sin convertir esa madurez en una puntuación rígida.
+4. Cuando falte un target, marcarlo como gap, establecer primero una baseline representativa y acordar el target según outcome, horizonte y guardrails.
+5. Implementar el handoff semántico propuesto y validarlo contra el futuro contrato operativo de `dashboard-ux`.
+6. Mantener pendiente el forward testing en Codex y Claude Code antes de considerar una promoción posterior a Estable.
