@@ -5,7 +5,8 @@ Este archivo es el inventario canónico de capacidades planificadas o publicadas
 | Skill | Estado | Milestone | Alcance actual |
 | --- | --- | --- | --- |
 | `product-analytics` | Experimental | v0.1 | Contrato operativo, cuatro referencias bajo demanda y evals iniciales implementados; sujeto a validación de uso y compatibilidad. |
-| `dashboard-ux` | Esqueleto | v0.1 | Estructura reservada; contrato y conocimiento conceptual pendientes. |
+| `dashboard-ux` | Experimental | v0.1 | Contrato operativo para diseñar y revisar dashboards, cuatro referencias bajo demanda y seis evals iniciales; pendiente de prueba en un dashboard real. |
+| `roadmap-backlog` | Experimental | Sin asignar | Contrato operativo, plantillas portables, validador opcional y diez evals iniciales para planificación persistente por proyecto; pendiente de revisión independiente, forward testing y uso real. |
 
 ## Estados
 
@@ -17,7 +18,8 @@ Este archivo es el inventario canónico de capacidades planificadas o publicadas
 
 ## Decisiones pendientes para v0.1
 
-- Acordar ejemplos positivos y negativos que delimiten `dashboard-ux`.
-- Definir el formato de casos y el runner —si fuera necesario— de las evals sin introducir tooling prematuro.
+- Probar el Review mode de `dashboard-ux` sobre un dashboard real y registrar los fallos observados.
+- Confirmar con fallos observados si las evals necesitan un runner, sin introducir tooling prematuro.
+- Ejecutar evaluación independiente, forward testing y uso real antes de promover una skill a Stable.
 - Definir matriz mínima de compatibilidad y mecanismo de distribución para agentes consumidores.
-- Acordar criterios cuantitativos o rúbricas que permitan promover una skill de experimental a estable.
+- Asignar `roadmap-backlog` a un milestone sin redefinir implícitamente el alcance de v0.1.

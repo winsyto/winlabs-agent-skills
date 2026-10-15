@@ -96,4 +96,123 @@ Para cada fuente futura, anotar:
 
 ### `dashboard-ux`
 
-No se han incorporado todavía fuentes para diseñar el contrato de `dashboard-ux`. La revisión de `dashboard-designer` anterior solo informa el límite con `product-analytics`.
+#### Dashboard Designer — `NickCrew/Claude-Cortex`
+
+- **Repositorio / autor:** Nicholas Ferguson / comunidad, `NickCrew/Claude-Cortex`.
+- **URL:** <https://github.com/NickCrew/Claude-Cortex/blob/main/skills/dashboard-designer/SKILL.md>
+- **Fecha de consulta:** 2026-09-09.
+- **Skill o componente:** `dashboard-designer`.
+- **Conceptos útiles:** comenzar por audiencia, decisión, frecuencia y acción; separar headline, contexto y detalle; adaptar densidad y profundidad al tipo de dashboard; exigir comparación y definición comprensible.
+- **Limitaciones detectadas:** mezcla selección de KPIs, arquitectura de información, color, chart selection, tooling BI y reglas numéricas rígidas; presupone patrones de lectura y posiciones universales.
+- **Decisión:** **adaptar** el encuadre audience–decision–action y la separación overview/detail; **descartar** cardinalidades, posiciones, colores y cadencias universales.
+- **Licencia / restricciones:** MIT según el repositorio y el frontmatter. Se sintetizan principios; no se copia contenido.
+
+#### UI/UX Pro Max — `nextlevelbuilder/ui-ux-pro-max-skill`
+
+- **Repositorio / autor:** Next Level Builder, `nextlevelbuilder/ui-ux-pro-max-skill`.
+- **URL:** <https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/.claude/skills/ui-ux-pro-max/SKILL.md>
+- **Fecha de consulta:** 2026-09-09.
+- **Skill o componente:** `ui-ux-pro-max` y su routing hacia guías de UX, charts y stacks.
+- **Conceptos útiles:** progressive disclosure por dominio; accesibilidad prioritaria; densidad como variable contextual; estados y feedback; responsive behavior; búsqueda focalizada de guidance en lugar de cargar un catálogo completo.
+- **Limitaciones detectadas:** mega-skill orientada también a estilos, tipografía, animación, design systems, chart catalogs y código específico por stack; depende de scripts y datasets propios.
+- **Decisión:** **incorporar** el patrón de routing bajo demanda y **adaptar** densidad, accesibilidad y feedback; **descartar** tooling, branding, catálogo visual y recomendaciones de implementación.
+- **Licencia / restricciones:** MIT. No se reutilizan datasets, scripts ni redacción.
+
+#### Interface Design — `Dammyjay93/interface-design`
+
+- **Repositorio / autor:** Dammy Jay, `Dammyjay93/interface-design`.
+- **URL:** <https://github.com/Dammyjay93/interface-design/blob/main/.claude/skills/interface-design/SKILL.md>
+- **Fecha de consulta:** 2026-09-09.
+- **Skill o componente:** `interface-design`.
+- **Conceptos útiles:** diseñar desde persona y tarea concreta; hacer visible una jerarquía deliberada; tratar navegación, densidad y estructura como decisiones; reutilizar patrones existentes; verificar estados y accesibilidad.
+- **Limitaciones detectadas:** combina dirección estética, design-system architecture, implementación, tokens, motion y QA visual; su ideal de una sola focalización puede ser insuficiente para consolas operativas con varias excepciones simultáneas.
+- **Decisión:** **adaptar** el enfoque task-first, la jerarquía intencional y el rechazo de defaults; **descartar** estética, persistencia de design systems y disciplina de código.
+- **Licencia / restricciones:** MIT. Uso comparativo sin copiar instrucciones ni ejemplos.
+
+#### Frontend Design — Anthropic
+
+- **Repositorio / organización:** Anthropic, `anthropics/skills`.
+- **URL:** <https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md>
+- **Fecha de consulta:** 2026-09-09.
+- **Skill o componente:** `frontend-design` oficial.
+- **Conceptos útiles:** vincular decisiones visuales con propósito y audiencia; evitar layouts genéricos; usar estructura solo cuando codifica relaciones reales; tratar responsive behavior y estados como parte del diseño.
+- **Limitaciones detectadas:** está orientada a dirección estética e implementación de interfaces completas; no ofrece una metodología analítica específica para dashboards y su foco expresivo no es adecuado como default operativo.
+- **Decisión:** **adaptar** intencionalidad y contextualización; **descartar** dirección estética, branding, implementación y búsqueda deliberada de singularidad visual como responsabilidad de `dashboard-ux`.
+- **Licencia / restricciones:** Apache License 2.0 en `skills/frontend-design/LICENSE.txt`. Síntesis original sin reproducción.
+
+#### Data Visualization — `NTCoding/claude-skillz`
+
+- **Repositorio / autor:** NTCoding, `NTCoding/claude-skillz`.
+- **URL:** <https://github.com/NTCoding/claude-skillz/blob/main/data-visualization/SKILL.md>
+- **Fecha de consulta:** 2026-09-09.
+- **Skill o componente:** `data-visualization`.
+- **Conceptos útiles:** overview, filter y details-on-demand; elección de encodings según la tarea; interacción coordinada; evitar depender solo del color; separar contexto general de detalle.
+- **Limitaciones detectadas:** combina percepción, chart selection, algoritmos de layout, librerías y umbrales de renderizado; la amplitud atrae pedidos de implementación ajenos a dashboard UX.
+- **Decisión:** **adaptar** la progresión overview→focus→detail y los criterios de accesibilidad; **derivar** selección exhaustiva de gráficos y **descartar** librerías, algoritmos y código.
+- **Licencia / restricciones:** no se identificó un archivo de licencia en la ruta consultada. Se usa únicamente como fuente pública comparativa, sin reutilización textual o de código.
+
+#### KPI Dashboard Design — `alexander-kastil/skills-collection`
+
+- **Repositorio / autor:** Alexander Kastil, `alexander-kastil/skills-collection`; la colección atribuye la implementación disponible a `wshobson/agents`.
+- **URL:** <https://github.com/alexander-kastil/skills-collection/blob/master/CATALOG.md> y <https://github.com/wshobson/agents/blob/main/plugins/business-analytics/skills/kpi-dashboard-design/SKILL.md>.
+- **Fecha de consulta:** 2026-09-09.
+- **Skill o componente:** `kpi-dashboard-design`.
+- **Conceptos útiles:** distinguir niveles estratégico, táctico y operativo; mostrar comparación, tendencia, target o alerta; permitir drill-down; relacionar freshness con ritmo de decisión; mantener visible la metodología de una métrica.
+- **Limitaciones detectadas:** combina metric selection, SQL, troubleshooting de datos, infraestructura, thresholds y visualización; prescribe cantidades, colores y patrones por defecto que no son universales.
+- **Decisión:** **adaptar** niveles, contexto y drill-down; **descartar** definición de KPI, SQL, pipelines, thresholds automáticos y reglas visuales rígidas.
+- **Licencia / restricciones:** la colección declara MIT y el upstream `wshobson/agents` también declara MIT. Se conserva la atribución de procedencia y no se copia contenido.
+
+#### Metrics Dashboard — `borghei/Claude-Skills`
+
+- **Repositorio / autor:** Amin Borghei, `borghei/Claude-Skills`.
+- **URL:** <https://github.com/borghei/Claude-Skills/blob/main/project-management/discovery/metrics-dashboard/SKILL.md>
+- **Fecha de consulta:** 2026-09-09.
+- **Skill o componente:** `metrics-dashboard`, revisada para delimitar solapamientos.
+- **Conceptos útiles:** audiencia, owner y cadence; jerarquía; comparison anchor; poda de contenido no usado; distinción entre vistas ejecutivas y operativas.
+- **Limitaciones detectadas:** fuerza North Star y cardinalidades, incorpora instrumentación, define KPIs y charts, ejecuta scripts y mezcla gobierno métrico con UX.
+- **Decisión:** **adaptar** poda, audience fit y comparison context; **descartar** arquitectura métrica prescriptiva, tooling, selección de KPIs y chart recipes.
+- **Licencia / restricciones:** MIT con Commons Clause. Uso limitado a comparación y delimitación; no se reproduce estructura ni texto.
+
+#### The Eyes Have It — Ben Shneiderman
+
+- **Autor / publicación:** Ben Shneiderman, IEEE Symposium on Visual Languages, 1996.
+- **URL:** <https://hci.stanford.edu/courses/cs448b/papers/shneiderman96eyes.pdf>
+- **Fecha de consulta:** 2026-09-09.
+- **Componente estudiado:** taxonomía de tareas de visual information seeking.
+- **Conceptos útiles:** overview, zoom, filter, details-on-demand, relate, history y extract como repertorio de tareas, no como secuencia obligatoria para todo dashboard.
+- **Limitaciones detectadas:** marco general de information visualization anterior a patrones web actuales; no resuelve priorización, estados, accesibilidad ni diferencias entre dashboards ejecutivos y operativos.
+- **Decisión:** **adaptar** overview→focus→detail y conservar history/reset cuando la exploración lo requiera.
+- **Licencia / restricciones:** publicación académica bajo derechos de IEEE; se cita y parafrasea sin reproducción extensa.
+
+#### Web Content Accessibility Guidelines 2.2 y tutoriales — W3C WAI
+
+- **Organización:** World Wide Web Consortium, Web Accessibility Initiative.
+- **URL:** <https://www.w3.org/TR/WCAG22/>, <https://www.w3.org/WAI/tutorials/images/complex/> y <https://www.w3.org/WAI/WCAG22/Understanding/use-of-color>.
+- **Fecha de consulta:** 2026-09-09.
+- **Componente estudiado:** keyboard access, focus, contrast, non-color encoding y alternativas para gráficos complejos.
+- **Conceptos útiles:** funcionalidad operable por teclado; orden y foco significativos; color acompañado por texto, forma o patrón; contraste; labels y descripciones textuales equivalentes para información visual compleja.
+- **Limitaciones detectadas:** define requisitos de accesibilidad, no una metodología completa de dashboard UX ni reglas de prominencia o densidad.
+- **Decisión:** **incorporar** como quality gates y requisitos del handoff a implementación.
+- **Licencia / restricciones:** estándares y material W3C sujetos a sus políticas de documentos y licencias. Referencia normativa; no se copia contenido extenso.
+
+#### Loading y Empty States — Carbon Design System
+
+- **Organización:** IBM, Carbon Design System.
+- **URL:** <https://carbondesignsystem.com/components/loading/usage/> y <https://preview.carbondesignsystem.com/building-blocks/core/patterns/empty-states>.
+- **Fecha de consulta:** 2026-09-09.
+- **Componente estudiado:** feedback de carga, progressive loading y variantes de empty/error state.
+- **Conceptos útiles:** diferenciar carga global y localizada; conservar estructura durante la carga; distinguir ausencia real, falta de resultados, permisos, configuración y error; ofrecer explicación y siguiente acción contextual.
+- **Limitaciones detectadas:** guidance ligada a un design system y componentes concretos; no cubre freshness, datos parciales o anomalías como sistema completo.
+- **Decisión:** **adaptar** la taxonomía de estados y el principio explicación→impacto→acción; **descartar** prescripciones de componentes.
+- **Licencia / restricciones:** documentación pública de IBM Carbon; uso como referencia con atribución, sin copiar componentes o redacción.
+
+#### Progressive Disclosure — Nielsen Norman Group
+
+- **Organización / autor:** Nielsen Norman Group, Jakob Nielsen.
+- **URL:** <https://www.nngroup.com/articles/progressive-disclosure/>
+- **Fecha de consulta:** 2026-09-09.
+- **Componente estudiado:** deferir opciones y contenido secundarios sin volverlos indescubribles.
+- **Conceptos útiles:** mantener lo esencial en la vista primaria y trasladar complejidad secundaria a niveles accesibles; verificar que el acceso al detalle sea comprensible y reversible.
+- **Limitaciones detectadas:** principio general de interaction design, no específico de dashboards ni suficiente para decidir qué información es analíticamente importante.
+- **Decisión:** **incorporar** como criterio de overview/detail y discoverability, subordinado a audiencia y tarea.
+- **Licencia / restricciones:** contenido público sujeto a derechos del sitio; solo se cita y sintetiza.

@@ -53,6 +53,21 @@ Evaluar propiedades semánticas y observables en vez de exigir texto literal. Ma
 5. Actualizar catálogo y changelog.
 6. Clasificar el cambio según Semantic Versioning antes de publicar.
 
+## Gate mínimo para Stable
+
+Promover una skill de Experimental a Stable solo cuando exista evidencia de que el contrato funciona fuera de su sesión de autoría. Como mínimo:
+
+- contrato operativo completo, sin placeholders y con activación, límites, inputs, workflow, output y criterios de calidad observables;
+- progressive disclosure coherente: el entrypoint conserva lo esencial y cada referencia necesaria tiene routing directo, sin duplicación material;
+- al menos cinco evals relevantes, incluidos un caso de no activación y uno ambiguo o de routing;
+- evaluación conductual de los casos contra propiedades semánticas, no coincidencia literal;
+- cero fallos críticos abiertos en activación, seguridad, límites o resultado;
+- una evaluación independiente de quien o de la conversación que produjo la implementación;
+- forward testing satisfactorio en al menos dos agentes compatibles declarados por el proyecto;
+- al menos un uso en un proyecto real, con evidencia de que el output apoyó la tarea prevista.
+
+Aplicar el gate de forma proporcional: registrar evidencia y limitaciones, no crear ceremonias o tooling si una revisión humana trazable basta. Una skill que cumple su evaluación interna pero aún espera evidencia externa puede describirse en documentación como **Experimental — validated / Candidate for Stable**. Esa anotación no crea un estado nuevo ni sustituye el catálogo canónico.
+
 ## Definition of Done
 
 Una skill deja de ser esqueleto cuando su contrato está acordado, sus recursos son necesarios y localizables, sus evals cubren éxito y límites, y la documentación de catálogo refleja su estado real.
